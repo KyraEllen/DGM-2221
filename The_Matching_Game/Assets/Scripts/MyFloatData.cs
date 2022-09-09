@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class MyFloatData : ScriptableObject
 {
-    public float value;
+    public float speed; 
 
-    public void Speed(float num)
+    public void SetSpeed(float num)
     {
-        value += num;
+        speed = num;
+    }
+
+    public void UpdateSpeed(float num)
+    {
+        speed += num;
     }
 }
