@@ -1,12 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 public class DraggableBehaviour : MonoBehaviour
 { 
     private Camera cameraObj;
     public bool draggable;
-    public Vector3 position, offset;
+    public UnityEngine.Vector3 position;
+    public UnityEngine.Vector3 offset;
+
     public UnityEvent startDragEvent, endDragEvent;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,7 @@ public class DraggableBehaviour : MonoBehaviour
 
     public IEnumerator OnMouseDown()
     {
-        offset = transform.position - cameraObj.ScreenToViewportPoint(Input.mousePosition);
+        offset = transform.position - cameraObj.ScreenToWorldPoint(Input.mousePosition);
         draggable = true;
         startDragEvent.Invoke();
         yield return new WaitForFixedUpdate();
@@ -24,7 +25,7 @@ public class DraggableBehaviour : MonoBehaviour
         while (draggable)
         {
             yield return new WaitForFixedUpdate();
-            position = cameraObj.ScreenToViewportPoint(Input.mousePosition);//Debug.Log("drag*QUEEN*");
+            position = cameraObj.ScreenToWorldPoint(Input.mousePosition);//Debug.Log("drag*QUEEN*");
             transform.position = position;
         }
     }
