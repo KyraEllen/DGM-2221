@@ -6,22 +6,22 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Text))]
 public class TextLabelBehaviour : MonoBehaviour
 {
-    private Text label;
+    private Text _label;
     public UnityEvent startEvent;
 
     private void Start()
     {
-        label = GetComponent<Text>();
+        _label = GetComponent<Text>();
         startEvent.Invoke();
     }
 
     public void UpdateLabel(FloatData obj)
     {
-        label.text = obj.value.ToString(CultureInfo.InvariantCulture);
+        _label.text = obj.value.ToString(CultureInfo.InvariantCulture);
     }
 
     public void UpdateLabel(IntData obj)
     {
-        label.text = obj.value.ToString(CultureInfo.InvariantCulture);
+        _label.text = obj.value.ToString(CultureInfo.InvariantCulture);
     }
 }
