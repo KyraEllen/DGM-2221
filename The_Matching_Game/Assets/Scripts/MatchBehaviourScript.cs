@@ -10,19 +10,21 @@ public class MatchBehaviourScript : MonoBehaviour
    private IEnumerator OnTriggerEnter(Collider other)
    {
       var tempObj = other.GetComponent<IDContainerBehaviour>();
-      if (tempObj != null) 
+      if (tempObj == null) 
          yield break;
       
       var otherID = tempObj.idObj;
       if (otherID == idObj)
       {
-         matchEvent.Invoke();
+         //matchEvent.Invoke();
+         Debug.Log("Matched");
       }
       else
       {
-         noMatchEvent.Invoke();
-         yield return new WaitForSeconds(0.5f);
-         noMatchEvent.Invoke();
+        // noMatchEvent.Invoke();
+         //yield return new WaitForSeconds(0.5f);
+         //noMatchEvent.Invoke();
+         Debug.Log("No");
       }
    }
 }
