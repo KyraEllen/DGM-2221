@@ -6,7 +6,9 @@ public class CoroutineBehaviour : MonoBehaviour
 {
     public UnityEvent startEvent, startCountEvent, repeatCountEvent, endCountEvent, repeatUntilFalseEvent;
 
-    public bool canRun;
+    public UnityEvent repeatEvent;
+    
+    public int couterNum = 3;
     public IntData counterNum;
     public float seconds = 3.0f;
     private WaitForSeconds wfsObj;
