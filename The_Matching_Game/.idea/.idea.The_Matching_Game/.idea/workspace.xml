@@ -14,6 +14,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColorIDBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColorIDDataList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoroutineBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActionHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Instancer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -88,7 +89,8 @@
       <workItem from="1663816957155" duration="3533000" />
       <workItem from="1663820568055" duration="818000" />
       <workItem from="1664380398551" duration="979000" />
-      <workItem from="1664398176946" duration="4154000" />
+      <workItem from="1664398176946" duration="4457000" />
+      <workItem from="1664415893711" duration="2520000" />
     </task>
     <servers />
   </component>
