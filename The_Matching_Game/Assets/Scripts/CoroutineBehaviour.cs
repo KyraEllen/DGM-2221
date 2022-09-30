@@ -8,7 +8,7 @@ public class CoroutineBehaviour : MonoBehaviour
 
 
     public bool canRun;
-    public int counterNum;
+    public  IntData counterNum;
     public float seconds = 3.0f;
     private WaitForSeconds wfsObj;
     private WaitForFixedUpdate wffuObj;
@@ -36,10 +36,10 @@ public class CoroutineBehaviour : MonoBehaviour
         wffuObj = new WaitForFixedUpdate();
         startCountEvent.Invoke();
         yield return wfsObj;
-        while (counterNum > 0)
+        while (counterNum.value > 0)
         {
-            repeatCountEvent.Invoke();
-           // counterNum.value--;
+            repeatCountEvent.Invoke(); 
+            counterNum.value--;
             yield return wfsObj;
         }
         endCountEvent.Invoke();
