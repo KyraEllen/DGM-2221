@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
+
 public class ColorMatchBehavior : MatchBehaviour
 {
   public ColorIDDataList colorIDDataListObj;
@@ -18,4 +18,3 @@ public class ColorMatchBehavior : MatchBehaviour
     renderer.color = newColor.value;
   }
 }
-*/

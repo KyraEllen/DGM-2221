@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MatchBehaviourScript : MonoBehaviour
+public class MatchBehaviour : MonoBehaviour
 {
    public ID idObj;
    public UnityEvent matchEvent, noMatchEvent;
